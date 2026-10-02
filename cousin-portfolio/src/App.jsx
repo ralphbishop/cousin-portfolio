@@ -24,6 +24,7 @@ export default function App() {
         <Route path="education" element={<Placeholder title="Education" />} />
         <Route path="cv" element={<Placeholder title="CV" />} />
         <Route path="contact" element={<Placeholder title="Contact" />} />
+        <Route path="*" element={<Placeholder title="404 Not Found" />} />
       </Route>
     </Routes>
   )

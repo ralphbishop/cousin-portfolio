@@ -18,7 +18,9 @@ export default function Navbar() {
                 <ul>
                     {navItems.map((item) => (
                         <li key={item.to}>
-                            <NavLink to={item.to} end={item.to === '/'}></NavLink>
+                            <NavLink to={item.to} end={item.to === '/'}>
+                                {item.label}
+                            </NavLink>
                         </li>
                     ))}
                 </ul>
