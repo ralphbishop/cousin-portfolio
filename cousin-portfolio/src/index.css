@@ -28,3 +28,67 @@ nav a.active {
 main {
   padding: 1rem;
 }
+
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.app-shell > main {
+  flex: 1;
+}
+
+/* Footer*/
+.site-footer {
+  margin-top: 2rem;
+  padding-block: 2rem 1rem;
+  background: var (--surface);
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.footer-name {
+  margin: 0;
+  font-weight: 700;
+}
+
+.footer-title {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+}
+
+.footer-contact,
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-copy {
+  margin: 1.5rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 700px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .footer-links {
+    justify-content: flex-end;
+  }
+}
