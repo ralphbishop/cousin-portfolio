@@ -92,3 +92,46 @@ main {
     justify-content: flex-end;
   }
 }
+
+:root {
+  color-scheme: light;
+}
+
+:root [data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0f1218;
+  --surface: #181c25;
+  --text: #e8eaf0;
+  --muted: #a3aab8;
+  --border: #2a303c;
+  --accent: #7b93ff;
+  --accent-contrast: #0f1218;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-toggle {
+  width: 2.75rem;
+  height: 2.75rem;
+  font-size: 1.25rem;
+  color: var(--text);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.theme-toggle:hover,
+.menu-toggle:hover {
+  background: var(--surface);
+}
+
+@media (min-width: 900px) {
+  main-nav {
+    margin-left: auto;
+  }
+}
