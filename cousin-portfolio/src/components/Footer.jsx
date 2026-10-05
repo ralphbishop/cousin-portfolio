@@ -4,6 +4,9 @@ import {profile} from '../data/profile.js'
 
 export default function Footer() {
     const year = new Date().getFullYear()
+    const quickLinks = navItems.filter ((item) =>
+        ['/', '/projects', '/cv', '/contact'].includes(item.to)
+)
 
     return (
         <footer className="footer">
@@ -37,7 +40,7 @@ export default function Footer() {
 
             <nav aria-label="Footer Navigation">
                 <ul className="footer-links">
-                    {navItems.map((item) => (
+                    {quickLinks.map((item) => (
                         <li key={item.to}>
                             <Link to={item.to}>{item.label}</Link>
                         </li>
