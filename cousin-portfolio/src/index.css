@@ -225,8 +225,6 @@ main {
     padding: 0.5rem 0.75rem;
     border-radius: var(--radius);
   }
-
-
 }
 
 :root {
@@ -245,7 +243,7 @@ main {
 
 }
 
-:root [data-theme='dark'] {
+:root[data-theme='dark'] {
   color-scheme: dark;
 
   --bg: #0f1218;
