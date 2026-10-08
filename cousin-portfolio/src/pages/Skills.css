@@ -1,0 +1,94 @@
+skills-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+    align-items: start;
+}
+
+.skill-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.25rem 1rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--border);
+}
+
+.skill:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.skill:last-child {
+    padding-bottom: 0;
+}
+
+.skill-name {
+    font-weight: 500;
+}
+
+.skill-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.skill-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.skill-level {
+    font-size: 0.875rem;
+    color: var(--muted);
+}
+
+.meter {
+    display: inline-flex;
+    gap: 4px;
+}
+
+.meter span {
+    position: relative;
+    overflow: hidden;
+    width: 1.5rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    background: var(--border);
+}
+
+.meter span.on::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    transform-origin: left;
+    animation: meter-fill 450ms var(--ease) backwards;
+}
+
+.meter span:nth-child(2)::after {
+    animation-delay: 90ms;
+}
+
+.meter span:nth-child(3)::after {
+    animation-delay: 180ms;
+}
+
+@keyframes meter-fill {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+

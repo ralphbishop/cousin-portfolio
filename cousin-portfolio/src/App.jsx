@@ -2,6 +2,7 @@ import { Routes, Route, useParams } from 'react-router'
 import Layout from './components/Layout.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
+import Skills from './pages/Skills.jsx'
 
 // temporary pages; we'll replace each one with a real page
 function Placeholder({ title }) {
@@ -19,7 +20,7 @@ export default function App() {
       <Route element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="skills" element={<Placeholder title="Skills" />} />
+        <Route path="skills" element={<Skills />} />
         <Route path="experience" element={<Placeholder title="Experience" />} />
         <Route path="projects" element={<Placeholder title="Projects" />} />
         <Route path="projects/:slug" element={<ProjectPlaceholder />} />
