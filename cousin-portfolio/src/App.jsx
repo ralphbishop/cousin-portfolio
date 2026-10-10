@@ -4,6 +4,7 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Skills from './pages/Skills.jsx'
 import Experience from './pages/Experience.jsx'
+import Education from './pages/Education.jsx'
 
 // temporary pages; we'll replace each one with a real page
 function Placeholder({ title }) {
@@ -25,7 +26,7 @@ export default function App() {
         <Route path="experience" element={<Experience />} />
         <Route path="projects" element={<Placeholder title="Projects" />} />
         <Route path="projects/:slug" element={<ProjectPlaceholder />} />
-        <Route path="education" element={<Placeholder title="Education" />} />
+        <Route path="education" element={<Education />} />
         <Route path="cv" element={<Placeholder title="CV" />} />
         <Route path="contact" element={<Placeholder title="Contact" />} />
         <Route path="*" element={<Placeholder title="Page not found" />} />

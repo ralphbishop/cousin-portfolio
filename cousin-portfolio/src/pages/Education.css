@@ -1,0 +1,70 @@
+.edu-list,
+.cred-grid {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.edu-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.edu-degree,
+.cred-name {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.edu-school,
+.cred-meta {
+    margin: 0.25rem 0 0;
+    color: var(--muted);
+}
+
+.edu-years {
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.edu-major {
+    margin: 0.75rem 0 0;
+}
+
+.edu-details {
+    margin: 0.75rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.credentials {
+    margin-top: 2.5rem;
+}
+
+.cred-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit minmax(min(100%, 18rem), 1fr));
+}
+
+.cred-card {
+    height: 100%;
+}
+
+.cred-id {
+    margin: 0.5rem 0 0;
+    font-size: 0.875rem;
+    color: var(--muted);
+}
+
+.cred-id span {
+    font-family: ui-monoscape, 'Cascadia Code', Menlo, Consolas, monospace;
+    overflow-wrap: anywhere;
+}
+
+.cred-card a {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-weight: 500;
+}
