@@ -1,0 +1,133 @@
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.detail-title {
+  margin-bottom: 0.5rem;
+}
+
+.detail-meta {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+}
+
+.detail-layout {
+  display: grid;
+  gap: 2rem;
+}
+
+.detail-layout.no-media {
+  max-width: 48rem;
+}
+
+/* the framed artwork */
+.detail-media {
+  min-height: 16rem;
+  padding: 1.25rem;
+  background:
+    radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%),
+    var(--surface);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) * 1.5);
+  box-shadow: var(--shadow-sm);
+}
+
+.detail-media .zoom-trigger img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100vh - 10rem);
+  margin-inline: auto;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.28));
+}
+
+.detail-lead {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.detail-section {
+  margin-top: 1.75rem;
+}
+
+.detail-section p {
+  max-width: 65ch;
+  margin: 0;
+}
+
+.detail-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.detail-list li + li {
+  margin-top: 0.35rem;
+}
+
+.detail-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* extra images */
+.detail-shots {
+  margin-top: 3rem;
+}
+
+.shots-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr));
+}
+
+.shots-grid .zoom-trigger {
+  padding: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.shots-grid .zoom-trigger img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+/* previous / next */
+.detail-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 900px) {
+  .detail-layout {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .detail-layout.no-media {
+    grid-template-columns: 1fr;
+  }
+
+  /* the drawing stays in view while you read the details */
+  .detail-media {
+    position: sticky;
+    top: 5.5rem;
+  }
+}

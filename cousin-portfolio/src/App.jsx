@@ -1,20 +1,16 @@
-import { Routes, Route, useParams } from 'react-router'
+import { Routes, Route } from 'react-router'
 import Layout from './components/Layout.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Skills from './pages/Skills.jsx'
 import Experience from './pages/Experience.jsx'
-import Education from './pages/Education.jsx'
 import Projects from './pages/Projects.jsx'
+import ProjectDetail from './pages/ProjectDetail.jsx'
+import Education from './pages/Education.jsx'
 
 // temporary pages; we'll replace each one with a real page
 function Placeholder({ title }) {
   return <h1>{title}</h1>
-}
-
-function ProjectPlaceholder() {
-  const { slug } = useParams()
-  return <h1>Project: {slug}</h1>
 }
 
 export default function App() {
@@ -26,7 +22,7 @@ export default function App() {
         <Route path="skills" element={<Skills />} />
         <Route path="experience" element={<Experience />} />
         <Route path="projects" element={<Projects />} />
-        <Route path="projects/:slug" element={<ProjectPlaceholder />} />
+        <Route path="projects/:slug" element={<ProjectDetail />} />
         <Route path="education" element={<Education />} />
         <Route path="cv" element={<Placeholder title="CV" />} />
         <Route path="contact" element={<Placeholder title="Contact" />} />
