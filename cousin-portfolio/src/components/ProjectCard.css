@@ -1,0 +1,114 @@
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    transition: 
+        box-shadow 300ms var(--ease),
+        border-color 300ms var(--ease),
+        transform 300ms var(--ease);
+}
+
+.project-card:hover {
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+    box-shadow: 
+        var(--shadow-md),
+        0 12px 32px color-mix(in srgb, var(--accent) 18%, transparent);
+    transform: translateY(-4px);    
+}
+
+.project-media {
+    display: block;
+    aspect-ratio: 1 / 1;
+    padding: 1.25rem;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+    background: 
+        radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%),
+        var(--surface);
+}
+
+.project-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.25));
+    transition: transform 500ms var(--ease);
+}
+
+.project-card:hover .project-media img {
+    transform: scale(1.04);
+}
+
+.project-placeholder {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    text-align: center;
+    color: var(--muted);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+}
+
+.project-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.25rem;
+}
+
+.project-meta {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--muted);
+}
+
+.project-title {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.25;
+}
+
+.project-desc {
+    margin: 0;
+}
+
+.project-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.5rem;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.project-facts div {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.project-facts dt {
+    color: var(--muted);
+}
+
+.project-facts ft::after {
+    content: ':';
+}
+
+.project-facts dd {
+    margin: 0;
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
