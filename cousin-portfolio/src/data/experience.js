@@ -2,10 +2,10 @@ export const experience = [
     {
         id: 'entry-1',
         type: 'Academic project',
-        position: 'Video Editor',
+        position: 'Videographer/Photographer',
         organization: '',
         location: '',
-        start: '',
+        start: 'August 2026',
         end: 'Present',
         responsibilities: [
 

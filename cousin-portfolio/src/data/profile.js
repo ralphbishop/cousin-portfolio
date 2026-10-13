@@ -7,8 +7,8 @@ export const profile = {
     photo: '/images/jiro.png',
 
     email: 'jmzoleta@ccc.edu.ph',
-    phone: '',
-    location: '',
+    phone: '09684384838',
+    location: 'Blk 6 Lot 55 Calamba Heights Subdivision, Calamba City, Laguna',
     linkedin: '',
     github: '',
     cvUrl: '',
